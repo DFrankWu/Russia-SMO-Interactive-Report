@@ -8,6 +8,9 @@ The project first uses pandas to process and clean raw dataset, dropping missing
 
 Streamlit visualization
 
+**INSERT MAP AND GRAPHS**
+
+
 ![Intro](https://raw.githubusercontent.com/DFrankWu/Russia-SMO-Interactive-Report/main/assets/intro.png)
 
 ![Center of Battle](https://raw.githubusercontent.com/DFrankWu/Russia-SMO-Interactive-Report/main/assets/city.png)
