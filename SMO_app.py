@@ -6,25 +6,26 @@ import pydeck as pdk
 import os
 from helper import load_data, convert_to_csv, read_image_url
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 # Pre-plotting
 st.title(':ru: Special Military Operation Report')
 
-equipment_monthly_data = load_data('./datasets/monthly_cummulative_loss_count.csv').reset_index(drop=True)
-equipment_value_data = load_data('./datasets/cummulative_loss_value.csv').reset_index(drop=True)
-city_data = load_data('./datasets/most_contested_city.csv').reset_index(drop=True)
-people_data = load_data('./datasets/smo_people_loss.csv').reset_index(drop=True)
+equipment_monthly_data = load_data(dir_path + '/datasets/monthly_cummulative_loss_count.csv').reset_index(drop=True)
+equipment_value_data = load_data(dir_path + '/datasets/cummulative_loss_value.csv').reset_index(drop=True)
+city_data = load_data(dir_path + '/datasets/most_contested_city.csv').reset_index(drop=True)
+people_data = load_data(dir_path + '/datasets/smo_people_loss.csv').reset_index(drop=True)
 ## Loading complete ##
 
 # Intro image and background audio
-intro_image = Image.open('./assets/city.png')
+intro_image = Image.open(dir_path + '/assets/city.png')
 st.image(intro_image, caption='Graphical art by Max Butterworth / NBC News')
-with open('./assets/radio.mp3', 'rb') as audio_file:
+with open(dir_path + '/assets/radio.mp3', 'rb') as audio_file:
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/mp3')
 
 st.subheader(':flag-ua: The Battlefields and Affected Population :man-woman-girl-boy:')
-battle_image = Image.open('./assets/city.png')
-refugee_image = Image.open('./assets/refugee.png')
+battle_image = Image.open(dir_path + '/assets/city.png')
+refugee_image = Image.open(dir_path + '/assets/refugee.png')
 st.image(battle_image, caption='Picture by PATRICK TOMBOLA')
 st.image(refugee_image, caption='Picture from internet')
 
@@ -68,7 +69,7 @@ st.pydeck_chart(pdk.Deck(
 column_list = ['Aircraft', 'Helicopter', 'Tank', 'Apc', 'Field Artillery', 'Mrl', 'Anti-Aircraft Warfare', 'Military Auto', 'Drone','Naval Ship'] 
 # Selectbox for different plot
 st.subheader(':ru: Military Equipment Loss')
-equipment_image = Image.open('./assets/equipment.png')
+equipment_image = Image.open(dir_path + '/assets/equipment.png')
 st.image(equipment_image, caption='Picture by Reuters')
 
 
@@ -120,7 +121,7 @@ st.line_chart(data=filtered_data, x='Day', y='Personnel')
 last_day = people_data['Date'].dt.to_period('D').iloc[-1]
 last_death_count = people_data['Personnel'].iloc[-1]
 st.markdown(f' As of **{last_day}**, a **total** of ***{last_death_count}*** Russian personnels are **KIA**')
-death_image = Image.open('./assets/death.png')
+death_image = Image.open(dir_path + '/assets/death.png')
 st.image(death_image, caption='Picture from Adobe Stock')
 
 
@@ -182,7 +183,7 @@ if st.checkbox('Show raw data'):
 st.header('May Peace Prevail On Earth :dove_of_peace:')
 st.caption('“Peace cannot be kept by force. It can only be achieved by understanding.” - Albert Einstein')
 
-outro_image = Image.open('./assets/end.png')
+outro_image = Image.open(dir_path + '/assets/end.png')
 st.image(outro_image, caption='Source: wallpapercave.com')
 
 st.markdown('Original data provided by [Petro](https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war) @ Kaggle.com')
