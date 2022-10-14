@@ -186,5 +186,5 @@ outro_image = Image.open('./assets/end.png')
 st.image(outro_image, caption='Source: wallpapercave.com')
 
 st.markdown('Original data provided by [Petro](https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war) @ Kaggle.com')
-st.markdown('Processed and cleaned by [Donghang Wu](https://github.com/DFrankWu), access raw data via [Kaggle](https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war) ')
+st.markdown('Processed and cleaned by [Donghang Wu](https://github.com/DFrankWu), access raw data via [Kaggle](https://www.kaggle.com/datasets/xc1011/ukraine-russia-war-clean-datasets) ')
 st.caption('*According to author, "main data sources are Armed Forces of Ukraine and Ministry of Defence of Ukraine. They gathered data from different points of the country. The calculation is complicated by the high intensity of hostilities."')
