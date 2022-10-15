@@ -9,7 +9,7 @@ Ever since then, both sides lost billions dollars worth of military equipments, 
 The project first uses pandas to process and clean raw dataset, dropping missing and unnecessary datapoints, grouping categories that had name changed, and summarizing city names according to appearing frequency.
 
 ## Check out the inveractive app here:
-🚩 [![Music Through Ages](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/tanul-mathur/music-through-the-ages/AppFinal.py)
+🚩 [![Music Through Ages](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dfrankwu-russia-smo-interactive-report-smo-app-tly9kt.streamlitapp.com/)
 
 - You are welcome to download both raw and processed from my repo, raw data credit to [Petro](https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war)
 
