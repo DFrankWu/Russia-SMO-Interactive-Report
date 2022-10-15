@@ -17,7 +17,7 @@ people_data = load_data(dir_path + '/datasets/smo_people_loss.csv').reset_index(
 ## Loading complete ##
 
 # Intro image and background audio
-intro_image = Image.open(dir_path + '/assets/city.png')
+intro_image = Image.open(dir_path + '/assets/intro.png')
 st.image(intro_image, caption='Graphical art by Max Butterworth / NBC News')
 with open(dir_path + '/assets/radio.mp3', 'rb') as audio_file:
     audio_bytes = audio_file.read()
